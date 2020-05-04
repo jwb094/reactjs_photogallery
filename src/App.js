@@ -13,8 +13,10 @@ import {
 function App() {
   return (
 
-    <div> 
-  <Route path="/" exact strict render={Index} />
+    <div> <Router>
+    <Route path="/" exact strict render={Index} />
+    </Router>
+
   </div> 
     );
 }
