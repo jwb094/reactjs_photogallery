@@ -11,12 +11,24 @@ class Index extends Component {
 
     
             
+        /*componentDidMount() {
+          fetch(`https://api.unsplash.com/photos/?client_id=${process.env.REACT_APP_CLIENT_ID_KEY}`)
+            .then(result => result.json())
+            .then(result => {
+              console.log(result)
+              this.setState({
+                      articles: result.articles,  
+                      top_four: result.articles   
+                 })
+            });
+      
+          }*/
 
           
     render() {
     
         return(
-            <section>
+            <section id="element">
 
           
           <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -31,9 +43,11 @@ class Index extends Component {
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...1</div>
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...1
+    <h5>New Image</h5>
+  </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...2</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...3</div>
+  
 </div>
   
         
