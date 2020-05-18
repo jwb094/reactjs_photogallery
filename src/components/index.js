@@ -18,7 +18,6 @@ class Index extends Component {
         console.log(result)
         this.setState({
           pics: result
-          //         top_four: result.articles   
         })
       });
 
@@ -28,6 +27,7 @@ class Index extends Component {
   render() {
 
     return (
+      
       <section id="element">
 
 
@@ -42,12 +42,20 @@ class Index extends Component {
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...1
           <h5>New Image</h5>
-
-          <div class="card">
+          {this.state.pics.map(pic => 
+          
+            <div class="card">
+            <img class="card-img-top" src={pic.urls.full} alt="Card image cap"></img>
             <div class="card-body">
-              This is some text within a card body.
+              photo by <a href={`{$pic.user.links.self}/?utm_source=your_app_name&utm_medium=referral`}> {pic.user.first_name}{pic.user.last_name} </a>
+              on <a href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral">Unsplash</a>
             </div>
           </div>
+          )}
+       
+     
+
+
 
           </div>
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...2</div>
